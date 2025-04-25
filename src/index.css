@@ -1,0 +1,107 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 140 10% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 140 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 140 10% 10%;
+
+    --primary: 142 70% 45%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 140 20% 92%;
+    --secondary-foreground: 140 10% 10%;
+
+    --muted: 140 20% 96%;
+    --muted-foreground: 140 10% 40%;
+
+    --accent: 140 70% 95%;
+    --accent-foreground: 140 10% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 140 20% 87%;
+    --input: 140 20% 87%;
+    --ring: 142 70% 45%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 140 10% 26.1%;
+    --sidebar-primary: 142 70% 45%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 140 20% 95%;
+    --sidebar-accent-foreground: 140 10% 10%;
+    --sidebar-border: 140 20% 90%;
+    --sidebar-ring: 142 70% 45%;
+  }
+
+  .dark {
+    --background: 140 10% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 140 10% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 140 10% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 142 70% 45%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 140 20% 20%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 140 20% 20%;
+    --muted-foreground: 140 10% 70%;
+
+    --accent: 140 20% 20%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 140 20% 25%;
+    --input: 140 20% 25%;
+    --ring: 142 70% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.dashboard-card {
+  @apply border rounded-lg p-5 shadow-sm bg-gradient-to-br from-green-100/50 to-green-50/80;
+}
+
+.hover-scale {
+  @apply transition-transform duration-200 hover:scale-105;
+}
+
+.green-gradient-bg {
+  @apply bg-green-gradient;
+}
+
+.green-gradient-text {
+  @apply bg-gradient-to-br from-green-600 to-green-400 bg-clip-text text-transparent font-bold;
+}
+
+.dashboard-header {
+  @apply bg-gradient-to-r from-green-500 to-green-300 text-white p-6 rounded-lg shadow-md mb-6;
+}
